@@ -1,0 +1,34 @@
+class Solution {
+    public int[] sumZero(int n) {
+
+        int[] answer = new int[n]; 
+        int start =0;
+
+        if(n==1)
+        return answer;
+
+        int length = n;
+
+        if(n%2 != 0){
+          n = n-1;
+          answer[0] = 0;
+          start =1;
+        }
+
+    int half = n/2;
+    int startnum = -half;
+
+
+    for(int i = start ; i < length;i++){
+            answer[i] = startnum;
+            startnum++;
+            if(startnum == 0){
+                 startnum ++;
+             } 
+    }
+
+    return answer;
+
+    }
+}
+
